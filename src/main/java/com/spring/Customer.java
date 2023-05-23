@@ -1,5 +1,7 @@
 package com.spring;
 
+import java.util.Objects;
+
 public class Customer {
     private Integer id;
     private String name;
@@ -47,7 +49,29 @@ public class Customer {
         this.age = age;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(id, customer.id) && Objects.equals(name, customer.name) && Objects.equals(email, customer.email)  && Objects.equals(age, customer.age);
+    }
 
- }
+//    @Override
+    public int hasCode() {
+        return Objects.hash(id, name, email, age);
+    }
+
+//    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                "name=" + name + '\'' +
+                "email=" + email + '\'' +
+                "age=" + age +
+                "}";
+
+    }
+}
 
 
