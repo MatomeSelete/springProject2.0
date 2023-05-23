@@ -26,6 +26,27 @@ public class Customer {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+    public void setName(String id){
+        this.name = name;
+    }
+
+    public String geEmail() {
+        return email;
+    }
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+    public void setAge(Integer age){
+        this.age = age;
+    }
+
 
  }
 
